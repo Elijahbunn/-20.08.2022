@@ -1,17 +1,29 @@
-﻿// int[] numbers = {1..15};
-// int size = 16;
-// int index = 0;
-// int d = numbers[index] % 2;
+﻿Console.Write("Enter length of array: ");
+int length = int.Parse(Console.ReadLine());
+int[] array = new int[length];
+int i = 0;
 
-int N = 15;
+for (i = 0; i < length; i++)
+{
+    array[i] = i + 1;
+    Console.Write(array[i] + " ");
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Четные числа из массива: ");
+int size = length;
+
 int current = 1;
 int d = current % 2;
 
-while (current <= N)
+for (i = 0; i < size; i++)
 {
+    current = array[i];
+    d = current % 2;
     if (d == 0)
     {
-        Console.WriteLine (" " + current);
+        current = array[i];
+        Console.Write(current + " ");
     }
     current = current + 1;
-}
+} 
